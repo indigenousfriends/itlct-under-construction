@@ -1,0 +1,142 @@
+/* variables */
+:root {
+    --text-color: #ffffff;
+    --wrapper-width: 60%;
+    --title-font-sz: 5.653rem;
+    --text-font-sz: 2rem;
+}
+
+/* global styles */
+
+html {
+    font-size: 62.5%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--text-color);
+    background-color: #184F85;
+    font-weight: 400;
+}
+
+.wrapper {
+    max-width: 1440px;
+    width: var(--wrapper-width);
+    margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+img,
+svg {
+    display: block;
+    width: 100%;
+}
+
+
+/* typographic styles */
+h2 {
+    font-size: var(--title-font-sz);
+    text-align: center;
+}
+
+p {
+    font-size: var(--text-font-sz);
+}
+
+
+
+/* body section  */
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px)brightness(35%);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+body {
+    position: relative;
+}
+
+
+/* layout */
+.flex-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* header section */
+header .wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container {
+    width: 400px;
+}
+
+/* main section */
+main {
+    text-align: center;
+}
+
+main .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* socials list section */
+.socials-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.socials-list li {
+    width: 50px;
+}
+
+.socials-list svg {
+    transition: all 0.3s ease-in-out;
+    fill: #ffffff;
+}
+
+.socials-list svg:hover,
+.socials-list svg:focus {
+    scale: 1.13;
+    fill: #529de8;
+}
+
+/* footer styles */
+
+footer p {
+    text-align: center;
+    font-size: 1.5rem;
+}
