@@ -1,4 +1,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ifthesel/public_html/
-    - /bin/cp -R public $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp normalize.css $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp -R images $DEPLOYPATH
