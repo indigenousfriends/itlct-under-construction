@@ -1,25 +1,23 @@
 /* variables */
 :root {
     --text-color: #ffffff;
-    --wrapper-width: 60%;
-    --title-font-sz: 5.653rem;
-    --text-font-sz: 2rem;
+    --wrapper-width: 100%;
+    --title-font-sz: 3.6rem;
+    --subheading-font-sz: 2.187rem;
+    --text-font-sz: 1.43rem;
+    --spacing-sm: 1.2rem;
+    --spacing-md: 3rem;
+    --spacing-lg: 5rem;
 }
 
 /* global styles */
 
 html {
-    font-size: 62.5%;
+    font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--text-color);
     background-color: #184F85;
-    font-weight: 400;
-}
-
-.wrapper {
-    max-width: 1440px;
-    width: var(--wrapper-width);
-    margin: 0 auto;
+    font-weight: 200;
 }
 
 .sr-only {
@@ -51,10 +49,13 @@ svg {
 h2 {
     font-size: var(--title-font-sz);
     text-align: center;
+    text-transform: uppercase;
+    margin: var(--spacing-sm) auto;
 }
 
 p {
     font-size: var(--text-font-sz);
+    line-height: 1.3em;
 }
 
 
@@ -79,23 +80,22 @@ body {
     position: relative;
 }
 
-
 /* layout */
 .flex-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 /* header section */
-header .wrapper {
-    display: flex;
-    justify-content: center;
+header {
+    padding: var(--spacing-lg) 0 0;
 }
 
-.logo-container {
-    width: 400px;
+.logo {
+    max-width: 300px;
+    margin-top: var(--spacing-sm);
 }
 
 /* main section */
@@ -104,19 +104,38 @@ main {
 }
 
 main .wrapper {
+    width: var(--wrapper-width);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+
+    @media screen and (min-width: 1400px) {
+        max-width: 1200px;
+    }
 }
 
+.callout {
+    background-color: #D94252;
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    width: 100%;
+}
+
+.callout p {
+    font-weight: 600;
+    font-size: var(--subheading-font-sz);
+    margin: var(--spacing-sm) 0;
+}
 
 /* socials list section */
 .socials-list {
     display: flex;
     gap: 30px;
     justify-content: center;
-    margin: 5rem 0;
+    margin: var(--spacing-md) 0 var(--spacing-sm);
 }
 
 .socials-list li {
@@ -131,12 +150,22 @@ main .wrapper {
 .socials-list svg:hover,
 .socials-list svg:focus {
     scale: 1.13;
-    fill: #529de8;
+    fill: #424241;
 }
 
 /* footer styles */
 
+footer {
+    background-color: #424241;
+}
+
+footer .wrapper {
+    padding: var(--spacing-sm) 0;
+}
+
 footer p {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 0;
 }
