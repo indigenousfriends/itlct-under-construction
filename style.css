@@ -112,7 +112,10 @@ main .wrapper {
     align-items: center;
     padding: var(--spacing-sm) var(--spacing-md);
 
-    @media screen and (min-width: 1400px) {
+}
+
+@media screen and (min-width: 1400px) {
+    main .wrapper {
         max-width: 1200px;
     }
 }
