@@ -3,7 +3,9 @@
     --text-color: #ffffff;
     --wrapper-width: 100%;
     --title-font-sz: 3.6rem;
+    --title-font-sz-mobile: 2.4rem;
     --subheading-font-sz: 2.187rem;
+    --subheading-font-sz: 1.9rem;
     --text-font-sz: 1.43rem;
     --spacing-sm: 1.2rem;
     --spacing-md: 3rem;
@@ -47,10 +49,16 @@ svg {
 
 /* typographic styles */
 h2 {
-    font-size: var(--title-font-sz);
+    font-size: var(--title-font-sz-mobile);
     text-align: center;
     text-transform: uppercase;
     margin: var(--spacing-sm) auto;
+}
+
+@media screen and (min-width: 1400px) {
+    h2 {
+        font-size: var(--title-font-sz);
+    }
 }
 
 p {
@@ -110,20 +118,25 @@ main .wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-sm);
 
 }
 
 @media screen and (min-width: 1400px) {
     main .wrapper {
         max-width: 1200px;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .callout {
+        padding: var(--spacing-sm);
     }
 }
 
 .callout {
     background-color: #D94252;
     margin-top: var(--spacing-md);
-    padding: var(--spacing-md);
+    padding: var(--spacing-md) 0;
     width: 100%;
 }
 
@@ -146,7 +159,7 @@ main .wrapper {
 }
 
 .socials-list svg {
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
     fill: #ffffff;
 }
 
