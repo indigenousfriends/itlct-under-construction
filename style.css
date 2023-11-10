@@ -106,7 +106,7 @@ main .wrapper {
 }
 
 .image-section {
-    height: 300px;
+    height: 250px;
     background-image: url(images/bg.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -148,7 +148,8 @@ main .wrapper {
 }
 
 .socials-list svg:hover,
-.socials-list svg:focus {
+.socials-list svg:focus,
+.socials-list svg:active {
 		outline: 3px solid #fff;
 		border-radius: 5px;
 		outline-offset: 5px;
@@ -169,6 +170,12 @@ footer p {
 	font-size: 0.9rem;
 	font-weight: 300;
 	margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+		.image-section {
+			height: 300px;
+		}
 }
 
 @media screen and (min-width: 1400px) {
