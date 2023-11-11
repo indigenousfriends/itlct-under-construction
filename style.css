@@ -56,10 +56,10 @@ h2 {
 }
 
 @media screen and (min-width: 1400px) {
-    h2 {
-			font-size: var(--title-font-sz);
-			line-height: 3.8rem;
-    }
+	h2 {
+		font-size: var(--title-font-sz);
+		line-height: 4rem;
+	}
 }
 
 p {
@@ -90,10 +90,6 @@ header {
     padding: var(--spacing-lg) 0 var(--spacing-lg);
 }
 
-.logo {
-    max-width: 220px;
-}
-
 /* main section */
 main .wrapper {
     width: var(--wrapper-width);
@@ -101,8 +97,16 @@ main .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
     box-sizing: border-box;
+}
+
+main .logo-wrapper {
+	padding: var(--spacing-sm);
+}
+
+.logo {
+  max-width: 160px;
 }
 
 .image-section {
@@ -128,8 +132,8 @@ main .wrapper {
 
 .callout p {
     font-weight: 600;
-		margin: var(--spacing-sm) auto 0;
-    max-width: 800px;
+		margin: var(--spacing-sm) 0 0;
+    max-width: 900px;
 }
 
 /* socials list section */
@@ -182,14 +186,18 @@ footer p:last-of-type {
 }
 
 @media screen and (min-width: 768px) {
+		.logo {
+			  max-width: 220px;
+		}
+
 		.image-section {
-			height: 300px;
+			height: 400px;
 		}
 }
 
 @media screen and (min-width: 1400px) {
     h2 {
-        text-align: left;
+			text-align: left;
     }
 
     main .wrapper {
@@ -207,7 +215,6 @@ footer p:last-of-type {
     main .content-wrapper > div {
 			flex: 1 0 50%;
 			padding: var(--spacing-md);
-			padding-bottom: var(--spacing-sm);
     }
 
 		.image-section {
