@@ -111,12 +111,15 @@ main .logo-wrapper {
 
 .image-section {
     height: 200px;
+    position: relative;
 }
 
 .image-section img {
-		object-fit: cover;
-		height: 100%;
-		width: 100%;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 
 .callout {
