@@ -7,10 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // $to = 'info@iftheselandscouldtalk.org';
     // $events = 'events@iftheselandscouldtalk.org';
-    $test = 'max@max@indigenousfriends.org';
+    $test = 'max@indigenousfriends.org';
     $to = $test;
 
-    $cc = 'pam@indigenousfriends.org, solivan@max@indigenousfriends.org';
+    $cc = 'pam@indigenousfriends.org, solivan@indigenousfriends.org';
     $subject = 'New contact form message from the ITLCT website';
     $headers = "From: $email" . "\r\n" .
                "Reply-To: $email" . "\r\n" .
