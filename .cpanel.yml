@@ -3,6 +3,7 @@ deployment:
     - export DEPLOYPATH=/home/ifthesel/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp contact.html $DEPLOYPATH
+    - /bin/cp form.php $DEPLOYPATH
     - /bin/cp normalize.css $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
