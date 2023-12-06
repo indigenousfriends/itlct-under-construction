@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $firstName = $_POST['fname'];
-    $lastName = $_POST['lname'];
+    $firstName = $_POST['first-name'];
+    $lastName = $_POST['last-name'];
     $email = $_POST['email'];
     $message = $_POST['description'];
 
@@ -14,10 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = 'New contact form message from the ITLCT website';
     $headers = "From: $email" . "\r\n" .
                "Reply-To: $email" . "\r\n" .
-               "CC: $test" . "\r\n" .
+               "CC: $cc" . "\r\n" .
                'X-Mailer: PHP/' . phpversion();
 
-    $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nMessage:\n$message";
+    $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $firstName\n\nEmail: $email\n\nMessage:\n$message";
 
     if(mail($to, $subject, $body, $headers)){
         echo 'Message sent successfully';
