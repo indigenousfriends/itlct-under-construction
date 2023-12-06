@@ -5,11 +5,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $message = $_POST['description'];
 
-    $to = 'max@indigenousfriends.org';
+    // $to = 'info@iftheselandscouldtalk.org';
     // $events = 'events@iftheselandscouldtalk.org';
+    $test = 'max@max@indigenousfriends.org';
+    $to = $test;
+
+    $cc = 'pam@indigenousfriends.org, solivan@max@indigenousfriends.org';
     $subject = 'New contact form message from the ITLCT website';
     $headers = "From: $email" . "\r\n" .
                "Reply-To: $email" . "\r\n" .
+               "CC: $test" . "\r\n" .
                'X-Mailer: PHP/' . phpversion();
 
     $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nMessage:\n$message";

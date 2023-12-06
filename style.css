@@ -282,6 +282,7 @@ textarea {
 	border-radius: 5px;
 	padding: 10px;
 	margin: 5px 0;
+	color: #000;
 }
 
 /* to keep the 'select' dropdown text uniform with the rest of the form */
